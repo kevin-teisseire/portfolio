@@ -23,11 +23,7 @@
 opacity: 0;
 }
 
-#welcome.disapear{
-    opacity: 0;
-}
-
-#welcome.appear{
+#welcome.visible{
     opacity: 1;
 }
 

@@ -25,18 +25,23 @@ const projectIcn = document.getElementById('project-icn')
 // ---- dev settings : ------
 function show(sections){
     if(Array.isArray(sections)){
-    sections.forEach(el =>{
-        el.classList.add('visible');
+        sections.forEach(el =>{
+            el.classList.add('visible');
         });
     } else {
         sections.classList.add('visible');
-    }
+    };
 };
 
 function hide(sections){
-    sections.forEach(el =>{
-        el.classList.remove('visible');
-    })
+    if(Array.isArray(sections)){
+        sections.forEach(el =>{
+            el.classList.remove('visible');
+        });
+    } else {
+        sections.classList.remove('visible')
+    }
+
 }
 //projects.classList.add('visible')
 //sectionDetails.classList.add('visible')
@@ -53,7 +58,7 @@ function hide(sections){
 
 
 // Welcome text animation
-setTimeout(() => {welcome.classList.add('appear')}, 300)
+setTimeout(() => {show(welcome)}, 300)
 
 // Drop animation start
 setTimeout(() => {launchAnimation()}, 1200)
@@ -61,16 +66,15 @@ setTimeout(() => {launchAnimation()}, 1200)
 // Drop animation definition
 function launchAnimation() {
     setTimeout(() => { drop.classList.add('fall') },0)
-    setTimeout(() => { welcome.classList.remove('appear')}, 800);
+    setTimeout(() => { hide(welcome)}, 800);
     setTimeout(() => { drop.style.opacity = '0'
                         createRipples() 
                         showIcons()
                     },900)
-    setTimeout(() => { black.classList.add('disapear')
-                       welcome.classList.add('disapear') },1000)
+    setTimeout(() => { black.classList.add('disapear')},1000)
     setTimeout(() => { black.remove() }, 6000) 
-    setTimeout(() => {navbar.classList.add('visible')}, 1000);
-    setTimeout(() => {home.classList.add('visible')}, 1000);
+    setTimeout(() => {show(navbar)}, 1000);
+    setTimeout(() => {show(home)}, 1000);
 }
 
 // Ripple animation
