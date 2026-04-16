@@ -1,0 +1,93 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.section-container-center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height:40%;
+    width:40%;
+}
+
+.section-container-large{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height:85%;
+    width:100%;
+    padding: 20px;
+}
+
+.icn-row{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.icn-text{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+}
+
+.icn-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icn.visible:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.flex-top{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 10px;
+}
+
+p{
+    margin: 0;
+}
+
+.white-text-small {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-size: 14px;
+}
+
+.white-text-big {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-size: 16px;
+}
+
+.white-title{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.gray-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-size: 14px;
+}

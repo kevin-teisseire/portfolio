@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kevin Teisseire - Portfolio</title>
+        <link rel="stylesheet" href="style-guide.css">
+        <link rel="stylesheet" href="animations.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <svg style="display:none">
+            <defs>
+                <symbol id="icn-layers" viewBox="0 0 86 81">
+                    <path d="M6.70705 23.6118L39.8641 38.6917C40.7274 39.0793 41.8797 39.2818 43.0202 39.2818C44.1607 39.2818 45.313 39.0793 46.1747 38.6917L79.3317 23.6118C81.0752 22.8208 81.0752 21.5267 79.3317 20.7325L46.1747 5.6526C45.313 5.265 44.159 5.0625 43.0202 5.0625C41.8814 5.0625 40.7274 5.265 39.8641 5.6526L6.70705 20.7325C4.96354 21.5267 4.96354 22.8176 6.70705 23.6118Z" fill="black"/>
+                    <path d="M79.3317 39.0604C79.3317 39.0604 73.2764 36.3108 72.4735 35.9406C71.6706 35.5704 71.4539 35.591 70.6107 35.9596C69.7675 36.3282 46.1545 47.0702 46.1545 47.0702C45.1591 47.475 44.0841 47.6766 43 47.6619C41.8629 47.6619 40.7073 47.4578 39.8456 47.0702C39.8456 47.0702 16.8591 36.6288 15.7807 36.1257C14.6133 35.5957 14.2774 35.5957 13.2141 36.0703L6.66335 39.0414C4.91983 39.8324 4.91983 41.1281 6.66335 41.9207L39.8254 57.0006C40.6871 57.3882 41.841 57.5907 42.9799 57.5907C44.1187 57.5907 45.2726 57.3882 46.136 57.0006L79.293 41.9239C81.0752 41.1455 81.0752 39.8546 79.3317 39.0604Z" fill="black"/>
+                    <path d="M79.3317 57.3882C79.3317 57.3882 73.2764 54.6387 72.4735 54.2637C71.6706 53.8888 71.4539 53.9141 70.6107 54.2827C69.7675 54.6513 46.1746 65.417 46.1746 65.417C45.1791 65.8211 44.1041 66.0223 43.0202 66.0071C41.883 66.0071 40.7274 65.8046 39.864 65.417C39.864 65.417 16.8775 54.9756 15.8008 54.4726C14.6251 53.9362 14.2891 53.9362 13.2326 54.4172L6.68182 57.3882C4.93663 58.1793 4.93663 59.4734 6.68182 60.2675L39.8389 75.3475C40.7005 75.7525 41.8545 75.9376 42.9933 75.9376C44.1321 75.9376 45.2861 75.7351 46.1478 75.3475L79.3115 60.2754C81.0752 59.4734 81.0752 58.1824 79.3317 57.3882Z" fill="black"/>
+                </symbol>
+            </defs>
+        </svg>
+        <div id="main" class="flex-center">
+            <nav id="navbar">
+                <p class="nom">Kevin Teisseire</p>
+                    <i class="fa-solid fa-circle-chevron-left" id="back-icn"></i>
+            </nav>
+            <div id="black">
+                <h1 id="welcome">Welcome</h1>
+            </div>
+            <div id="drop"></div>
+            <div id="ripples"></div>
+            <div id="home" class="flex-center">
+                <div class="section-container-center">
+                    <div class="icn-row flex-center">
+                        <div class="icn resume flex-center" data-text="Resume">
+                            <i class="fa-solid fa-file"></i>
+                        </div>
+                        <div id="project-icn"class="icn project flex-center" data-text="Projects">
+                            <svg width="40" height="40"><use href="#icn-layers"/></svg>
+                        </div>
+                        <div class="icn contact flex-center" data-text="Contact">
+                            <i id= "mail-icn" class="fa-solid fa-at"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-title">
+                    <p class="icn-text">Resume</p>
+                </div>
+            </div>
+            <div id="projects">
+                <div id="sidebar-left" class ="sidebar-left">
+                    <div class="sidebar-left-content-wrapper">
+                            <h2 id="left-infos-title" class="white-text-big">title</h2>
+                            <p id="left-infos-subtitle" class="white-text-small">description</p>
+                            <p id="left-infos-role" class="white-text-small">description</p>
+                            <p id="left-infos-stack" class="white-text-small">description</p>
+                            <p id="left-infos-strengh" class="white-text-small">description</p>
+                            <p id="left-infos-type" class="white-text-small">description</p>
+                    </div>
+                </div>
+                <div class="section-grid">
+                    <div id="card_refactory" class="card side-left">
+                        <div class="card-image" style="background-image: url('images/projets/pres_refactory.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">ReFactory</p>
+                            <p class="card-sub">ERP</p>
+                        </div>
+                    </div>
+                    <div id="card_portfolio" class="card side-right">
+                        <div class="card-image" style="background-image: url('images/projets/pres_portfolio.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">Portfolio</p>
+                            <p class="card-sub">Web</p>
+                        </div>
+                    </div>
+                    <div id="card_bikemarket" class="card side-left">
+                        <div class="card-image" style="background-image: url('images/projets/pres_bikemarket.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">Bikemarket</p>
+                            <p class="card-sub">Web</p>
+                        </div>
+                    </div>
+                    <div id="card_alegria" class="card side-right">
+                        <div class="card-image" style="background-image: url('images/projets/pres_alegria.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">Landing Alegria</p>
+                            <p class="card-sub">Web</p>
+                        </div>
+                    </div>
+                    <div id="card_crypto"class="card side-left">
+                        <div class="card-image" style="background-image: url('images/projets/pres_crypto.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">Crypto-follow</p>
+                            <p class="card-sub">Web</p>
+                        </div>
+                    </div>
+                    <div id="card_report" class="card report side-right" id="reportGen">
+                        <div class="card-image" style="background-image: url('images/projets/pres_report.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">ReportGen</p>
+                            <p class="card-sub">Python · CLI</p>
+                        </div>
+                    </div>
+                    <div id="card_todo" class="card todo side-left">
+                        <div class="card-image" style="background-image: url('images/projets/pres_todo.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">Todo</p>
+                            <p class="card-sub">Python · CLI</p>
+                        </div>
+                    </div>
+                    <div id="card_otw" class="card side-right" >
+                        <div class="card-image" style="background-image: url('images/projets/pres_bandit.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">Bandit (OTW)</p>
+                            <p class="card-sub">CTF · CLI</p>
+                        </div>
+                    </div>
+                    <div id="card_nostal" class="card side-left">
+                        <div class="card-image" style="background-image: url('images/projets/pres_nostal.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">Nostal</p>
+                            <p class="card-sub">Video / Music</p>
+                        </div>
+                    </div>
+                    <div id="card_h2o" class="card side-right">
+                        <div class="card-image" style="background-image: url('images/projets/pres_h2o.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">H2O</p>
+                            <p class="card-sub">Design</p>
+                        </div>
+                    </div>
+                    <div id="card_udemy" class="card side-left">
+                        <div class="card-image" style="background-image: url('images/projets/pres_udemy.png')"></div>
+                        <div class="card-bottom">
+                            <p class="card-title">Udemy design</p>
+                            <p class="card-sub">Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="sidebar-right" class ="sidebar-right">
+                        <div class="sidebar-right-content-wrapper">
+                            <h2 id="right-infos-title" class="white-text-big">title</h2>
+                            <p id="right-infos-subtitle" class="white-text-small">description</p>
+                            <p id="right-infos-role" class="white-text-small">description</p>
+                            <p id="right-infos-stack" class="white-text-small">description</p>
+                            <p id="right-infos-strengh" class="white-text-small">description</p>
+                            <p id="right-infos-type" class="white-text-small">description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section-details">
+                <div class="details-header">
+                    <div class="project-title-wrapper">
+                        <div class="project-title-left-wrapper">
+                            <h1 id="details-title" class="details-title">Project title</h1>
+                                <p id = "details-subtitle" class="details-subtitle">Project subtitle</p>
+                            <div class="tag-wrapper"></div>
+                        </div>
+                        <div class="details-link-wrapper">
+                        </div>
+                    </div>
+                </div>
+                <div class="details-body-scroll-container">
+                    <div class="results-section">          
+                        <div class="results-img-section-container"></div>  
+                    </div> 
+                    <div class="details-body-main-wrapper">
+                        <div class="details-body-left">
+                            <div class="context-wrapper details-body-left-section-wrapper">
+                                <h2 class="context details-body-title">Contexte</h2>
+                                <p id="details-context" class="details-body-content">Description of the projects contexDescription of the projects contextDescription of the projects contextDescription of the projects contextDescription of the projects contextDescription of the projects contextDescription of the projects contextDescription of the projects contextt</p>
+                            </div>
+                            <div class="problem-wrapper details-body-left-section-wrapper">
+                                <h2 class="problem details-body-title">Problème</h2>
+                                <p id="details-problem" class="details-body-content">What was the problem ?What was the problem ?What was the problem ?What was the problem ?What was the problem ?What was the problem ?What was the problem ?What was the problem ?</p>
+                            </div>
+                            <div class="solution-wrapper details-body-left-section-wrapper">
+                                <h2 class="solution details-body-title">Solution</h2>
+                                <p id="details-solution" class="details-body-content">What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ?What is the solution ? </p>
+                            </div> 
+                            <div class="results-wrapper details-body-left-section-wrapper">
+                                <h2 class="results details-body-title">Resultats</h2>
+                                <p id="details-results" class="details-body-content">What were the results ?</p>
+                            </div>                   
+                        </div>
+                        <div class="details-body-right">
+                            <h2 class="context details-body-title">Décisions clefs</h2>
+                            <div class="details-body-right-content"></div> <!-- template from script.js-->           
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src = "hero.js"></script>
+    </body>
+</html>
