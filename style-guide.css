@@ -100,7 +100,6 @@ p{
     align-items: center;
     justify-content: center;
     height: 100%;
-    border: 1px solid white;
 }
 
 .row-center-body{
@@ -126,4 +125,8 @@ p{
     font-size: 32px;
     color: white;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
 }

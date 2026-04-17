@@ -601,16 +601,7 @@ function showDetails(projName){
 };
 
   // DETAILS SECTION - Section appearance
-cards.forEach(card => {
-    card.addEventListener('click', () => {
-        hide([grid, projects])
-        show([sectionDetails])
-        showDetails(card.id);
-        main.style.overflow = 'visible';
-        currentSection = 'details'
-        console.log(currentSection)
-    });
-});
+
 
 // PROJECTS SECTION - project infos
 
@@ -747,4 +738,3 @@ cards.forEach(card => {
         };
     });
 });
-

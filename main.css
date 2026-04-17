@@ -635,6 +635,7 @@ body{
 }
 
 
+
 .xp-btn-wrapper{
     display: flex;
     flex-direction: row;
@@ -661,3 +662,15 @@ body{
     font-size: 30px;
 }
 
+.contact-icn.mail{
+    color: white;
+    font-size: 35px;
+    justify-self: center;
+    margin-top: 2px;
+}
+
+.contact-title{
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+    
