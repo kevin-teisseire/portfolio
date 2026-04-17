@@ -120,7 +120,7 @@ body{
 }
 
 /*Sections general*/
-#home, #projects, #section-details{
+#home, #projects, #section-details, #section-resume, #section-contact{
     display: flex;
     opacity: 0;
     transition: opacity ease 0.5s;
@@ -132,7 +132,7 @@ body{
 
 }
 
-#home.visible, #projects.visible, #section-details.visible{
+#home.visible, #projects.visible, #section-details.visible, #section-resume.visible, #section-contact.visible{
     opacity: 1;
     pointer-events: all;
     display: flex;
@@ -521,10 +521,6 @@ body{
     white-space: pre-line;
 }
 
-
-
-
-
 .decision-wrapper{
     height: 100%;
 }
@@ -537,7 +533,7 @@ body{
 
 .details-decision-text{
     color: white;
-    margin: 0
+    margin: 0;
 }
 
 .project-title-wrapper{
@@ -599,3 +595,69 @@ body{
     scrollbar-width: none;
     padding-right: 10px;
 }
+
+/* Section resume */
+
+
+
+.resume-img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-image: url(/images/me.jpg);
+    background-size: cover;
+}
+
+.resume-xp{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-width: 60%;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.cv-btn{
+    border: 1px solid white;
+    min-width: 150px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cv-btn:hover{
+    background-color: #a66e0c;
+}
+
+
+.xp-btn-wrapper{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    width: 100%;;
+}
+
+.fa-download, .fa-folder-open{
+    color: white;
+    font-size: 22px;
+
+}
+
+.contact-wrapper{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icn{
+    color: white;
+    font-size: 30px;
+}
+

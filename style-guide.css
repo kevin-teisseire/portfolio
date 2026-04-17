@@ -91,3 +91,39 @@ p{
     margin: 0;
     font-size: 14px;
 }
+
+.large-body-wrapper{
+    display: flex;
+    width: 100%;
+    padding: 40px;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 1px solid white;
+}
+
+.row-center-body{
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    justify-self: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+.column-center-body{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-self: center;
+    justify-content: center;
+    justify-self: center;
+    width: 40%;
+}
+
+.huge-white-title{
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}

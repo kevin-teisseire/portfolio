@@ -20,6 +20,13 @@ const detailsTests = document.getElementById('details-tests')
 const sidebarLeft = document.getElementById('sidebar-left')
 const sidebarRight = document.getElementById('sidebar-right')
 const projectIcn = document.getElementById('project-icn')
+const resumeIcn = document.getElementById('resume-icn')
+const contactIcn = document.getElementById('contact-icn')
+const sectionResume = document.getElementById('section-resume')
+const sectionContact = document.getElementById('section-contact')
+const viewBtn = document.getElementById('view-btn')
+const downloadBtn = document.getElementById('download-btn')
+
 
 
 // ---- dev settings : ------
@@ -39,7 +46,7 @@ function hide(sections){
             el.classList.remove('visible');
         });
     } else {
-        sections.classList.remove('visible')
+        sections.classList.remove('visible');
     }
 
 }
@@ -51,30 +58,38 @@ function hide(sections){
 
 //show([home])
 
-
 // ------ end -------
 
 
+/* SECTION RESUME*/
 
+viewBtn.addEventListener('click', () => {
+    window.open('/images/CV Kevin Teisseire 2026.pdf')
+})
 
 // Welcome text animation
-setTimeout(() => {show(welcome)}, 300)
+setTimeout(() => {show(welcome)}, 300);
 
 // Drop animation start
-setTimeout(() => {launchAnimation()}, 1200)
+setTimeout(() => {launchAnimation()}, 1200);
 
 // Drop animation definition
 function launchAnimation() {
     setTimeout(() => { drop.classList.add('fall') },0)
     setTimeout(() => { hide(welcome)}, 800);
-    setTimeout(() => { drop.style.opacity = '0'
-                        createRipples() 
-                        showIcons()
-                    },900)
-    setTimeout(() => { black.classList.add('disapear')},1000)
-    setTimeout(() => { black.remove() }, 6000) 
+    setTimeout(() => { 
+        drop.style.opacity = '0';
+        createRipples();
+        showIcons();
+    },900)
+    setTimeout(() => { black.classList.add('disapear')},1000);
+    setTimeout(() => { black.remove() }, 6000);
     setTimeout(() => {show(navbar)}, 1000);
-    setTimeout(() => {show(home)}, 1000);
+    setTimeout(() => {
+        show(home)
+        currentSection = 'home'
+        console.log(currentSection)
+    }, 1000);
 }
 
 // Ripple animation
@@ -93,7 +108,6 @@ function createRipples() {
 // Show menu icons animation
 function showIcons() {
     const icons = document.querySelectorAll('.icn')
-
     icons.forEach((icon, index) => {
         setTimeout(() => {
             icon.classList.add('visible')
@@ -112,45 +126,46 @@ icns.forEach(icn => {
     })
 })
 
-// Sections animations
+// SECTIONS NAVIGATION
 
 projectIcn.addEventListener('click', () => {
-    show([grid, projects])
-    hide([home])
-    currentSection == 'projects'
-    console.log(currentSection)
+    hide(home);
+    show([grid, projects]);
+    currentSection = 'projects';
 })
 
-// Project
-
-projects.addEventListener('click', () => {
-    show([sectionDetails])
-    hide([grid])
-    currentSection = 'details'
-    console.log(currentSection)
-})
-
-// Back 
 back.addEventListener('click', () => {
     if(currentSection == 'details'){
-        show(projects)
-        hide(details)
-    } else if (currentSection == 'projects')
-        hide(projects)
+        hide(sectionDetails);
+        show([projects, grid]);
+        imgContainer = ``;
+        tagContainer=``;
+        currentSection = 'projects';
+    } else if (currentSection == 'projects'){
+        hide([projects, grid]);
+        show(home);
+        currentSection = 'home';
+    } else if (currentSection == 'resume'){
+        hide(sectionResume);
+        show(home);
+        currentSection = 'home';
+    } else if (currentSection == 'contact'){
+        hide(sectionContact)
         show(home)
-    console.log(currentSection)
-})
+    };
+});
 
+resumeIcn.addEventListener('click', () =>{
+    hide(home)
+    show(sectionResume)
+    currentSection = 'resume'
+});
 
-//go back conditions
-back.addEventListener('click', () => {
-    hide([sectionDetails])
-    show([projects, grid])
-    imgContainer = ``
-    tagContainer=``
-})
-
-
+contactIcn.addEventListener('click', () =>{
+    hide(home)
+    show(sectionContact)
+    currentSection = 'contact'
+});
 
 
 //Details -> Content management
@@ -207,7 +222,7 @@ const detailsContent = {
         J’ai appris à structurer une application complète de bout en bout, depuis la collecte de données jusqu’à leur automatisation.
 
         Il m’a également permis de comprendre l’importance d’une architecture simple et efficace pour créer des outils personnels réellement utilisables au quotidien.`,
-        images: ["/portfolio_recover/images/projets/reportgen-screen1.png", "/portfolio_recover/images/projets/reportgen-screen2.png", "/portfolio_recover/images/projets/pres_report.png"]
+        images: ["/images/projets/reportgen-screen1.png", "/images/projets/reportgen-screen2.png", "/images/projets/pres_report.png"]
     }, 
   // TODO PROJECT CONTENT
     card_todo : {
@@ -238,7 +253,7 @@ const detailsContent = {
         J’ai appris à structurer un système complet de gestion de données avec des fonctionnalités de tri, filtrage et affichage dynamique.
 
         Il m’a également permis de mieux comprendre comment améliorer l’expérience utilisateur même dans un environnement terminal.`,
-        images: ["/portfolio_recover/images/projets/pres_todo.png"]
+        images: ["/images/projets/pres_todo.png"]
     }, 
  // ALEGRIA PROJECT CONTENT
     card_alegria : {
@@ -278,7 +293,7 @@ const detailsContent = {
             { title: "SEO", desc: "Prise en compte du SEO (structure, arborescence)"},
             { title: "OUTILS EXTERNES", desc: "Intégration d’outils externes (cookies avec Axeptio, analytics)"}
         ],
-        images: ["/portfolio_recover/images/projets/pres_alegria.png", "/portfolio_recover/images/projets/alegria_figma.png"]
+        images: ["/images/projets/pres_alegria.png", "/images/projets/alegria_figma.png"]
     }, 
     // BIKEMARKET PROJECT CONTENT
     card_bikemarket : {
@@ -317,7 +332,7 @@ const detailsContent = {
         Ce projet m’a également permis de renforcer mes compétences en responsive design, en utilisant le système Flexbox de Bubble pour garantir une expérience fluide sur tous les supports.
 
         Enfin, j’ai acquis une meilleure compréhension des enjeux liés au lancement d’un produit (landing page, collecte d’emails, engagement utilisateur) et à la scalabilité d’une application.`,
-        images: ["/portfolio_recover/images/projets/pres_bikemarket.png", "/portfolio_recover/images/projets/bikemarket_panier.png", "/portfolio_recover/images/projets/bikemarket_cards.png"]
+        images: ["/images/projets/pres_bikemarket.png", "/images/projets/bikemarket_panier.png", "/images/projets/bikemarket_cards.png"]
     },
     // CRYPTO PROJECT CONTENT
     card_crypto : {
@@ -344,7 +359,7 @@ const detailsContent = {
         J’ai renforcé mes compétences en manipulation de données dynamiques et en affichage en temps réel.
 
         Il m’a également permis de développer une meilleure compréhension des interfaces orientées données et des enjeux liés à la lisibilité d’informations financières complexes.`,
-        images: ["/portfolio_recover/images/projets/pres_crypto.png"]
+        images: ["/images/projets/pres_crypto.png"]
     }, 
     // UDEMY PROJECT CONTENT
     card_udemy : {
@@ -374,7 +389,7 @@ const detailsContent = {
         J’ai renforcé ma maîtrise de Figma, notamment sur les composants, auto-layouts et grilles.
 
         Il m’a également appris à analyser une interface en profondeur pour en comprendre la logique et la reproduire fidèlement.`,
-        images: ["/portfolio_recover/images/projets/pres_udemy.png"]
+        images: ["/images/projets/pres_udemy.png"]
     }, 
     // NOSTAL PROJECT CONTENT
     card_nostal : {
@@ -404,7 +419,7 @@ const detailsContent = {
         J’ai renforcé mes compétences en design, en montage vidéo et en développement web, tout en apprenant à maintenir une cohérence globale sur un projet complexe.
 
         Il m’a également permis de concevoir une expérience immersive en reliant contenu créatif et interface interactive.`,
-        images: ["/portfolio_recover/images/projets/pres_nostal.png"]
+        images: ["/images/projets/pres_nostal.png"]
     },
     // H2O PROJECT CONTENT
     card_h2o : {
@@ -428,7 +443,7 @@ const detailsContent = {
         J’ai appris à simplifier des données complexes et à concevoir des interfaces orientées compréhension et efficacité.
 
         Même sans développement final, ce projet m’a apporté une expérience concrète en design d’outils professionnels.`,
-        images: ["/portfolio_recover/images/projets/pres_h2o.png"]
+        images: ["/images/projets/pres_h2o.png"]
     }, 
     // REFACTORY PROJECT CONTENT
     card_refactory : {
@@ -467,7 +482,7 @@ const detailsContent = {
         Ce projet m’a également permis de développer des compétences en gestion de produit, en communication avec des équipes techniques et métier, ainsi qu’en priorisation.
 
         Enfin, j’ai appris à travailler sur un projet long terme, en intégrant des cycles d’amélioration continue et de maintenance.`,
-        images: ["/portfolio_recover/images/projets/refactory_screen_dem.png", "/portfolio_recover/images/projets/refactory_screen_mcd.png","/portfolio_recover/images/projets/refactory_screen_miro.png", "/portfolio_recover/images/projets/refactory_screen_mpd.png", "/portfolio_recover/images/projets/refactory_screen_uml.png", "/portfolio_recover/images/projets/refactory_screen_gestion.png", "/portfolio_recover/images/projets/refactory_screen_recap.png", "/portfolio_recover/images/projets/refactory_screen_broyage.png"]
+        images: ["images/projets/refactory_screen_dem.png", "/images/projets/refactory_screen_mcd.png","/images/projets/refactory_screen_miro.png", "/images/projets/refactory_screen_mpd.png", "/images/projets/refactory_screen_uml.png", "/images/projets/refactory_screen_gestion.png", "/images/projets/refactory_screen_recap.png", "/images/projets/refactory_screen_broyage.png"]
     },
     card_otw : {
         title: "OVERTHEWIRE BANDIT",
@@ -493,7 +508,7 @@ const detailsContent = {
         J’ai acquis des bases en cybersécurité et une meilleure compréhension du fonctionnement des systèmes.
 
         Il m’a également appris à chercher efficacement de l’information et à tester des hypothèses de manière méthodique.`,
-        images: ["/portfolio_recover/images/projets/otw_lastlevel.png"]
+        images: ["/images/projets/otw_lastlevel.png"]
   }, 
     card_portfolio : {
         title: "PORTFOLIO WEB",
@@ -517,7 +532,7 @@ const detailsContent = {
         J’ai renforcé mes compétences en UX/UI, en structuration de contenu et en développement front-end.
 
         Il m’a également permis de comprendre comment concevoir une interface orientée utilisateur, capable de présenter efficacement des informations complexes de manière claire et engageante.`,
-        images: ["/portfolio_recover/images/projets/pres_portfolio.png"]
+        images: ["/images/projets/pres_portfolio.png"]
   }
 };
 // Display template
@@ -592,7 +607,8 @@ cards.forEach(card => {
         show([sectionDetails])
         showDetails(card.id);
         main.style.overflow = 'visible';
-        currentSection == 'details'
+        currentSection = 'details'
+        console.log(currentSection)
     });
 });
 

@@ -33,30 +33,30 @@
             <div id="home" class="flex-center">
                 <div class="section-container-center">
                     <div class="icn-row flex-center">
-                        <div class="icn resume flex-center" data-text="Resume">
+                        <div id="resume-icn" class="icn resume flex-center" data-text="CV">
                             <i class="fa-solid fa-file"></i>
                         </div>
-                        <div id="project-icn"class="icn project flex-center" data-text="Projects">
+                        <div id="project-icn"class="icn project flex-center" data-text="Projets">
                             <svg width="40" height="40"><use href="#icn-layers"/></svg>
                         </div>
-                        <div class="icn contact flex-center" data-text="Contact">
+                        <div id="contact-icn" class="icn contact flex-center" data-text="Contact">
                             <i id= "mail-icn" class="fa-solid fa-at"></i>
                         </div>
                     </div>
                 </div>
                 <div class="bottom-title">
-                    <p class="icn-text">Resume</p>
+                    <p class="icn-text"></p>
                 </div>
             </div>
             <div id="projects">
                 <div id="sidebar-left" class ="sidebar-left">
                     <div class="sidebar-left-content-wrapper">
-                            <h2 id="left-infos-title" class="white-text-big">title</h2>
-                            <p id="left-infos-subtitle" class="white-text-small">description</p>
-                            <p id="left-infos-role" class="white-text-small">description</p>
-                            <p id="left-infos-stack" class="white-text-small">description</p>
-                            <p id="left-infos-strengh" class="white-text-small">description</p>
-                            <p id="left-infos-type" class="white-text-small">description</p>
+                        <h2 id="left-infos-title" class="white-text-big">title</h2>
+                        <p id="left-infos-subtitle" class="white-text-small">description</p>
+                        <p id="left-infos-role" class="white-text-small">description</p>
+                        <p id="left-infos-stack" class="white-text-small">description</p>
+                        <p id="left-infos-strengh" class="white-text-small">description</p>
+                        <p id="left-infos-type" class="white-text-small">description</p>
                     </div>
                 </div>
                 <div class="section-grid">
@@ -139,14 +139,13 @@
                     </div>
                 </div>
                 <div id="sidebar-right" class ="sidebar-right">
-                        <div class="sidebar-right-content-wrapper">
-                            <h2 id="right-infos-title" class="white-text-big">title</h2>
-                            <p id="right-infos-subtitle" class="white-text-small">description</p>
-                            <p id="right-infos-role" class="white-text-small">description</p>
-                            <p id="right-infos-stack" class="white-text-small">description</p>
-                            <p id="right-infos-strengh" class="white-text-small">description</p>
-                            <p id="right-infos-type" class="white-text-small">description</p>
-                        </div>
+                    <div class="sidebar-right-content-wrapper">
+                        <h2 id="right-infos-title" class="white-text-big">title</h2>
+                        <p id="right-infos-subtitle" class="white-text-small">description</p>
+                        <p id="right-infos-role" class="white-text-small">description</p>
+                        <p id="right-infos-stack" class="white-text-small">description</p>
+                        <p id="right-infos-strengh" class="white-text-small">description</p>
+                        <p id="right-infos-type" class="white-text-small">description</p>
                     </div>
                 </div>
             </div>
@@ -155,11 +154,10 @@
                     <div class="project-title-wrapper">
                         <div class="project-title-left-wrapper">
                             <h1 id="details-title" class="details-title">Project title</h1>
-                                <p id = "details-subtitle" class="details-subtitle">Project subtitle</p>
+                            <p id = "details-subtitle" class="details-subtitle">Project subtitle</p>
                             <div class="tag-wrapper"></div>
                         </div>
-                        <div class="details-link-wrapper">
-                        </div>
+                        <div class="details-link-wrapper"></div>
                     </div>
                 </div>
                 <div class="details-body-scroll-container">
@@ -190,10 +188,54 @@
                             <div class="details-body-right-content"></div> <!-- template from script.js-->           
                         </div>
                     </div>
-
+                </div>
+            </div>
+            <div id="section-resume">
+                <div class="large-body-wrapper">
+                    <div class="row-center-body">
+                        <div class="resume-img"></div>
+                        <div class="resume-xp">
+                            <div class="xp-header">
+                            <h1 class="white-text-big">Kevin Teisseire</h1>
+                            <h2 class="white-text-small">Concepteur développeur d’applications</h2>
+                            </div>
+                            <p class="white-text-small">Développeur d'applications avec 3 ans d'expérience en conception de
+                                produits digitaux, passionné par les systèmes complexes et la rigueur
+                                technique. Profil atypique alliant compétences techniques (no-code/low-
+                                code, modélisation BDD, tests, documentation) à une forte culture métier
+                                acquise dans des environnements exigeants. En cours de montée en
+                                compétences sur les fondamentaux de la cybersécurité.
+                            </p>
+                            <div class="xp-btn-wrapper">
+                                <a href="/images/CV Kevin Teisseire 2026.pdf" download>
+                                    <div class="cv-btn" id="download-btn">
+                                        <i class="fa-solid fa-download"></i>
+                                        <p class="white-text-small">Télécharger CV</p>
+                                    </div>
+                                </a>
+                                <div class="cv-btn" id="view-btn">
+                                    <i class="fa-regular fa-folder-open"></i>
+                                    <p class="white-text-small">Voir CV</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section-contact">
+                <div class="large-body-wrapper">
+                    <div class="column-center-body">
+                        <h2 class="huge-white-title">Contact</h2>
+                        <div class="contact-wrapper">
+                            <a href="www.linkedin.com/in/kevinteisseire"><i class="fa-brands fa-linkedin contact-icn"></i></a>
+                           <a href="mailto:teisseire.kevin@gmail.com"></a><ion-icon name="mail" class="contact-icn"></ion-icon></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <script src = "hero.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
