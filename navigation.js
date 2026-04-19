@@ -34,7 +34,7 @@ export function hide(sections){
 };
 
 viewBtn.addEventListener('click', () => {
-    window.open('/images/CV-Kevin-Teisseire.pdf');
+    window.open('images/CV-Kevin-Teisseire.pdf');
 });
 
 projectIcn.addEventListener('click', () => {
