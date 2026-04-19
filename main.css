@@ -113,6 +113,7 @@ body{
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease-in;
+    height: 50px;
 }
 
 .bottom-title.visible{
