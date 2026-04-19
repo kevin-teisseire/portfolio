@@ -127,7 +127,7 @@ export const detailsContent = {
             { title: "SEO", desc: "Prise en compte du SEO (structure, arborescence)"},
             { title: "OUTILS EXTERNES", desc: "Intégration d’outils externes (cookies avec Axeptio, analytics)"}
         ],
-        images: ["images/projets/pres_alegria.png", "images/projets/alegria_figma.png"]
+        images: ["./images/projets/pres_alegria.png", "images/projets/alegria_figma.png"]
     }, 
     // BIKEMARKET PROJECT CONTENT
     card_bikemarket : {
