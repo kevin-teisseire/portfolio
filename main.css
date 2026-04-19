@@ -605,7 +605,7 @@ body{
     width: 250px;
     border-radius: 50%;
     border: 1px solid white;
-    background-image: url(/images/me.jpg);
+    background-image: url('/images/me.jpg');
     background-size: cover;
 }
 
