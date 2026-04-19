@@ -29,7 +29,6 @@ export const sectionResume = document.getElementById('section-resume');
 export const sectionContact = document.getElementById('section-contact');
 export const downloadBtn = document.getElementById('download-btn');
 export const gallery = document.querySelector('.results-section');
-export const viewBtn = document.getElementById('view-btn');
 export const projectIcn = document.getElementById('project-icn');
 export let imgContainer = document.querySelector('.results-img-section-container');
 export let tagContainer = document.querySelector('.tag-wrapper');

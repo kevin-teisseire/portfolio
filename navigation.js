@@ -3,7 +3,7 @@
 =======================
 */
 import { projects, grid, sectionContact, home, sectionResume, sectionDetails, 
-    resumeIcn, contactIcn, gallery, cards, viewBtn, projectIcn, back, sidebarLeft, sidebarRight, imgContainer, tagContainer } from "./dom.js";
+    resumeIcn, contactIcn, gallery, cards, projectIcn, back, sidebarLeft, sidebarRight, imgContainer, tagContainer } from "./dom.js";
 
 import { showInfosLeft, showInfosRight, showDetails } from './display.js'
 
@@ -32,10 +32,6 @@ export function hide(sections){
         sections.classList.remove('visible');
     };
 };
-
-viewBtn.addEventListener('click', () => {
-    window.open('images/CV-Kevin-Teisseire.pdf');
-});
 
 projectIcn.addEventListener('click', () => {
     hide(home);
