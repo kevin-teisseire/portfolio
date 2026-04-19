@@ -660,6 +660,7 @@ body{
 .contact-icn{
     color: white;
     font-size: 30px;
+    transition: opacity 0.2s ease;
 }
 
 .contact-icn.mail{
@@ -673,4 +674,26 @@ body{
     border-bottom: 1px solid white;
     padding-bottom: 20px;
 }
-    
+
+.circle{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 1px solid white;
+    transform-style: preserve-3d;
+    transition: 0.6s ease-in-out;
+    background-color: #93761f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#email-icn{
+    opacity: 0;
+    transition: 0.4s opacity;
+}
+
+#coin-container{
+    perspective: 300px;
+    border: 1px solid white;
+}

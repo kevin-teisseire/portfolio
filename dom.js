@@ -34,3 +34,7 @@ export const projectIcn = document.getElementById('project-icn');
 export let imgContainer = document.querySelector('.results-img-section-container');
 export let tagContainer = document.querySelector('.tag-wrapper');
 export let linkContainer = document.querySelector('.details-link-wrapper');
+export const coin = document.getElementById('coin');
+export const flipBtn = document.getElementById('flip-btn');
+export const linkedinIcn = document.getElementById('linkedin-icn');
+export const mailIcn = document.getElementById('email-icn');

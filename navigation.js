@@ -7,7 +7,7 @@ import { projects, grid, sectionContact, home, sectionResume, sectionDetails,
 
 import { showInfosLeft, showInfosRight, showDetails } from './display.js'
 
-
+show(grid)
 
 export const currentSection = {
     name: ''

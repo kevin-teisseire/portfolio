@@ -3,7 +3,9 @@
     Animations 
 ======================*/
 
-import { icns, black, welcome, navbar, home, drop, bottomTitleEl, bottomTitleText} from './dom.js';
+import { 
+    icns, black, welcome, navbar, home, drop, bottomTitleEl, 
+    bottomTitleText, coin, flipBtn, linkedinIcn, mailIcn} from './dom.js';
 import { show, hide, currentSection } from './navigation.js'
 
 // Welcome text animation
@@ -21,7 +23,7 @@ function launchAnimation() {
         createRipples();
         showIcons();
     },900)
-    setTimeout(() => { black.classList.add('disapear')},1000);
+    setTimeout(() => { black.classList.add('disapear')},100);
     setTimeout(() => { black.remove() }, 6000);
     setTimeout(() => {show(navbar)}, 1000);
     setTimeout(() => {
@@ -63,3 +65,22 @@ icns.forEach(icn => {
         bottomTitleEl.classList.remove('visible');
     });
 });
+
+// Coin
+let coinState = 'linkedin'  
+let flipped = false
+let ranNum = Math.floor(Math.random() * 10)
+let deg = ranNum * 180
+
+flipBtn.addEventListener('click', () => {
+    coin.style.transform = `rotateY(${deg}deg)`
+    if (coinState == 'linkedin'){
+        setTimeout(() => {linkedinIcn.style.opacity = 0}, 200)
+        setTimeout(() => {mailIcn.style.opacity = 1}, 400)
+        coinState = 'mail'
+    } else {
+        setTimeout(() => {linkedinIcn.style.opacity = 1}, 400)
+        setTimeout(() => {mailIcn.style.opacity = 0}, 200)
+        coinState = 'linkedin'
+    }
+})
