@@ -512,7 +512,6 @@ body{
     width: 400px;
     letter-spacing: 2px;
     font-size: 18px;
-    
 }
 
 .details-body-content{
@@ -598,14 +597,12 @@ body{
 
 /* Section resume */
 
-
-
 .resume-img{
     height: 250px;
     width: 250px;
     border-radius: 50%;
     border: 1px solid white;
-    background-image: url('/images/me.jpg');
+    background-image: url('images/me.jpg');
     background-size: cover;
 }
 
@@ -633,8 +630,6 @@ body{
 .cv-btn:hover{
     background-color: #a66e0c;
 }
-
-
 
 .xp-btn-wrapper{
     display: flex;
@@ -675,6 +670,7 @@ body{
     padding-bottom: 20px;
 }
 
+/*
 .circle{
     height: 250px;
     width: 250px;
@@ -697,3 +693,4 @@ body{
     perspective: 300px;
     border: 1px solid white;
 }
+    */
