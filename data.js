@@ -352,7 +352,7 @@ export const detailsContent = {
         solution: `J’ai conçu une interface basée sur une navigation par projets avec affichage dynamique des informations. Une sidebar contextuelle permet d’obtenir rapidement les informations clés au survol, tandis que chaque projet est structuré pour offrir une lecture claire et approfondie.`,
         stack: ["FIGMA", "HTML", "CSS", "VANILLA JS"],
         linkList: [
-            {site : 'Github', link : "", iconClasses: gitIcnClasses}
+            {site : 'Github', link : "https://github.com/kevin-teisseire/portfolio", iconClasses: gitIcnClasses}
         ],
         decisions: [
             { title: "AFFICHAGE DYNAMIQUE AU SURVOL (HOVER UX)", desc: "Mise en place d’une sidebar qui affiche les informations clés des projets au survol pour améliorer la rapidité de lecture." },
