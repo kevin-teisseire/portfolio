@@ -332,44 +332,20 @@ body{
     border: 1px solid rgba(180, 140, 40, 0.4);
 }
 
-#card_portfolio{
+#card_portfolio, #card_workforgood, #card_jobfinder, #card_alegria, #card_bikemarket, #card_crypto{
     background-color: #0d2420 ;
 }
 
-#card_report{
+#card_report, #card_todo, #card_otw{
     background-color: #2a1a2a ;
 }
 
-#card_todo{
-    background-color: #2a1a2a ;
-}
-
-#card_otw{
-    background-color: #2a1a2a ;
-}
-
-#card_alegria{
-    background-color: #0d2420 ;
-}
-
-#card_h2o{
+#card_h2o, #card_udemy{
     background-color: #0d1f2d ;
 }
 
 #card_nostal{
     background-color: #2a0d0d ;
-}
-
-#card_bikemarket{
-    background-color: #0d2420 ;
-}
-
-#card_udemy{
-    background-color: #0d1f2d ;
-}
-
-#card_crypto{
-    background-color: #0d2420 ;
 }
 
 /* Section détails */

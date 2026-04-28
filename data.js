@@ -318,6 +318,7 @@ export const detailsContent = {
         Enfin, j’ai appris à travailler sur un projet long terme, en intégrant des cycles d’amélioration continue et de maintenance.`,
         images: ["images/projets/refactory_screen_dem.png", "images/projets/refactory_screen_mcd.png","images/projets/refactory_screen_miro.png", "images/projets/refactory_screen_mpd.png", "images/projets/refactory_screen_uml.png", "images/projets/refactory_screen_gestion.png", "images/projets/refactory_screen_recap.png", "images/projets/refactory_screen_broyage.png"]
     },
+    // OTW PROJECT CONTENT
     card_otw : {
         title: "OVERTHEWIRE BANDIT",
         subtitle: "PARCOURS D’INITIATION À LA CYBERSÉCURITÉ (33 NIVEAUX VALIDÉS)",
@@ -344,6 +345,7 @@ export const detailsContent = {
         Il m’a également appris à chercher efficacement de l’information et à tester des hypothèses de manière méthodique.`,
         images: ["images/projets/otw_lastlevel.png"]
   }, 
+    // PORTFOLIO PROJECT CONTENT
     card_portfolio : {
         title: "PORTFOLIO WEB",
         subtitle: "CONCEPTION ET DÉVELOPPEMENT D’UNE EXPÉRIENCE PORTFOLIO INTERACTIVE",
@@ -367,7 +369,66 @@ export const detailsContent = {
 
         Il m’a également permis de comprendre comment concevoir une interface orientée utilisateur, capable de présenter efficacement des informations complexes de manière claire et engageante.`,
         images: ["images/projets/pres_portfolio.png"]
-  }
+  }, 
+    card_workforgood: {
+        title: "WORK FOR GOOD",
+        subtitle: "PLATEFORME DE MISE EN RELATION FREELANCES & ENTREPRISES",
+        context: `Projet de développement d’une plateforme permettant de connecter deux types d’utilisateurs :
+        - Freelances à la recherche de missions
+        - Entreprises à la recherche de profils
+        L’objectif était de créer une base fonctionnelle de marketplace avec gestion des interactions entre ces deux types d’acteurs.`,
+        problem: `Le défi était de concevoir une application capable de gérer deux types de comptes avec des usages distincts, tout en assurant une expérience fluide et cohérente pour chacun.`,
+        solution: `J’ai développé une application intégrant deux parcours utilisateurs distincts (freelance / entreprise), avec gestion des profils, des missions et des interactions.
+
+La plateforme permet aux freelances de consulter et filtrer les offres, et aux entreprises de trouver des profils pertinents grâce à un système de matchmaking basé sur les compétences.`,
+        stack: ['BUBBLE'],
+        linkList: [
+            {site : 'Site', link : "https://workforgood.bubbleapps.io/version-test", iconClasses: siteIcnClasses}
+        ],
+        decisions: [
+        { title: "GESTION DE DEUX TYPES DE COMPTES", desc: "Mise en place de logiques distinctes pour freelances et entreprises avec des interfaces et fonctionnalités adaptées." },
+        { title: "SYSTÈME D’AUTHENTIFICATION COMPLET", desc: "Gestion du login, de l’inscription et des sessions utilisateurs selon leur type." },
+        { title: "CRÉATION D’UN ESPACE ADMINISTRATEUR", desc: "Mise en place d’un espace admin permettant de gérer l’ensemble des données de la plateforme (utilisateurs, missions, contenus) afin de faciliter la modération, le suivi et l’administration globale de l’application."},
+        { title: "GESTION DES MISSIONS (CRUD)", desc: "Création, consultation et gestion des missions par les entreprises." },
+        { title: "SYSTÈME DE FILTRAGE DES MISSIONS", desc: "Possibilité pour les freelances d’affiner leur recherche selon différents critères." },
+        { title: "MATCHMAKING COMPÉTENCES / MISSIONS", desc: "Correspondance entre profils freelances et missions pour améliorer la pertinence des résultats." },
+        { title: "BARRE DE PROGRESSION DU PROFIL", desc: "Indicateur de complétion pour encourager les utilisateurs à enrichir leur profil." },
+        { title: "STRUCTURATION DES WORKFLOWS", desc: "Organisation des logiques applicatives pour gérer les différents parcours utilisateurs." },
+        { title: "GESTION DES ÉTATS UTILISATEURS", desc: "Adaptation dynamique de l’interface selon le type de compte et le statut de connexion." },
+        { title: "DEBUG ET OPTIMISATION", desc: "Correction des bugs liés aux workflows et amélioration continue de l’expérience utilisateur." },
+        ],
+        results: `Ce projet m’a permis de comprendre les enjeux d’une plateforme bi-face et la complexité de gestion de plusieurs types d’utilisateurs.
+
+        J’ai renforcé mes compétences en logique produit, en structuration de données et en conception de systèmes de mise en relation.
+
+        Il m’a également permis d’explorer des mécaniques d’engagement utilisateur comme le matchmaking et la complétion de profil.`,
+        images: ["images/projets/pres_workforgood.png", "images/projets/workforgood_enterprise.png", "images/projets/workforgood_profile.png", "images/projets/workforgood_mission.png"]
+    }, 
+        card_jobfinder : {
+        title: "JOB FINDER",
+        subtitle: "APPLICATION DE CONSULTATION ET RÉPONSE À DES MISSIONS FREELANCE",
+        context: `Projet personnel visant à créer une application centrée uniquement sur les freelances, leur permettant de consulter et répondre à des offres de missions sans gestion côté entreprise.`,
+        problem: `Les plateformes de mise en relation peuvent être complexes à utiliser. Le défi était de proposer une expérience plus directe, en supprimant les fonctionnalités non essentielles pour se concentrer sur la recherche et la réponse aux missions.`,
+        solution: `J’ai développé une application permettant aux freelances de consulter des missions et d’y répondre facilement, avec une interface épurée et des interactions limitées au strict nécessaire.`,
+        stack: ["BUBBLE"],
+        linkList: [
+            {site : 'Site', link : "https://bestjobfinder.bubbleapps.io/version-test/", iconClasses: siteIcnClasses}
+        ],
+        decisions: [
+        { title: "FOCUS SUR UN SEUL TYPE D’UTILISATEUR", desc: "Simplification de l’application en se concentrant uniquement sur les freelances." },
+        { title: "CONSULTATION DES MISSIONS", desc: "Affichage des offres disponibles avec accès rapide aux informations essentielles." },
+        { title: "RÉPONSE AUX OFFRES", desc: "Mise en place d’un système permettant aux freelances de postuler directement aux missions." },
+        { title: "SIMPLIFICATION DE LA LOGIQUE PRODUIT", desc: "Réduction des fonctionnalités pour améliorer la lisibilité et la rapidité d’utilisation." },
+        { title: "STRUCTURATION DES WORKFLOWS", desc: "Organisation des interactions pour garantir une navigation fluide et intuitive." },
+        ],
+        results: `Ce projet m’a permis d’explorer une approche produit simplifiée en me concentrant sur l’essentiel.
+
+        J’ai appris à identifier les fonctionnalités clés et à éliminer le superflu pour améliorer l’expérience utilisateur.
+
+        Il m’a également permis de comparer différentes approches de conception entre une plateforme complexe (bi-face) et une version plus minimaliste.`,
+        images: ["images/projets/jobfinder_login.png", "images/projets/pres_jobfinder.png", "images/projets/jobfinder_missions.png", "images/projets/jobfinder_details.png"]
+    }
+
 };
 
 export const infos = {
@@ -449,5 +510,19 @@ export const infos = {
         stack: "🛠 HTML • CSS • JavaScript",
         strengh: "⚡ UX dynamique + structuration de contenu",
         type: "⏱ Projet personnel"
-    }
+    }, 
+    card_workforgood: {
+        subtitle: "PLATEFORME FREELANCE BI-FACE",
+        role: "👤 Product Builder / No-code Developer",
+        stack: "🛠 Bubble",
+        strengh: "⚡ Matchmaking + gestion multi-utilisateurs",
+        type: "⏱ Projet personnel"
+    },
+    card_jobfinder: {
+        subtitle: "APP FREELANCE SIMPLIFIÉE",
+        role: "👤 No-code Developer",
+        stack: "🛠 Bubble",
+        strengh: "⚡ Consultation + réponse à des missions",
+        type: "⏱ Projet personnel"
+    }, 
 };
