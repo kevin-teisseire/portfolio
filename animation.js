@@ -66,21 +66,3 @@ icns.forEach(icn => {
     });
 });
 
-// Coin
-let coinState = 'linkedin'  
-let flipped = false
-let ranNum = Math.floor(Math.random() * 10)
-let deg = ranNum * 180
-
-flipBtn.addEventListener('click', () => {
-    coin.style.transform = `rotateY(${deg}deg)`
-    if (coinState == 'linkedin'){
-        setTimeout(() => {linkedinIcn.style.opacity = 0}, 200)
-        setTimeout(() => {mailIcn.style.opacity = 1}, 400)
-        coinState = 'mail'
-    } else {
-        setTimeout(() => {linkedinIcn.style.opacity = 1}, 400)
-        setTimeout(() => {mailIcn.style.opacity = 0}, 200)
-        coinState = 'linkedin'
-    }
-})
