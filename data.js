@@ -525,4 +525,11 @@ export const infos = {
         strengh: "⚡ Consultation + réponse à des missions",
         type: "⏱ Projet personnel"
     }, 
+    card_otw: {
+        subtitle: "CYBERSECURITY WARGAME",
+        role: "👤 Problem Solver",
+        stack: "🛠 Linux • Terminal",
+        strengh: "⚡ Résolution de 33 challenges de sécurité",
+        type: "⏱ Projet personnel"
+    }
 };
