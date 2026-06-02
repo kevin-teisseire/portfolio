@@ -42,6 +42,8 @@
 .icn.visible:hover{
     cursor: pointer;
     opacity: 1;
+    height: 115px;
+    width: 115px;
 }
 
 .flex-center{
@@ -64,6 +66,13 @@ p{
 
 .white-text-small {
     color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-size: 14px;
+}
+
+.black-text-small {
+    color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     font-size: 14px;
