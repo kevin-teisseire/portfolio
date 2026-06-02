@@ -3,7 +3,7 @@
 ====================== */
 
 
-// Declaring all project variables
+// Declaring dom variables
 export const drop = document.getElementById('drop');
 export const logo = document.getElementById('logo');
 export const btn  = document.getElementById('icn-wrapper');

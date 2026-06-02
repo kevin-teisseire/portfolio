@@ -7,6 +7,8 @@ import { projects, grid, sectionContact, home, sectionResume, sectionDetails,
 
 import { showInfosLeft, showInfosRight, showDetails } from './display.js'
 
+import { detailsContent } from "./data.js";
+
 show(grid)
 
 export const currentSection = {
@@ -74,25 +76,26 @@ contactIcn.addEventListener('click', () =>{
 
 
 gallery.addEventListener('wheel', (e) => {
-  e.preventDefault();
-  gallery.scrollLeft += e.deltaY;
+    e.preventDefault();
+    gallery.scrollLeft += e.deltaY;
 });
 
 // PROJECTS SECTION - Display content in sidebar
-cards.forEach(card => {
+let side = "";
+cards.forEach((card, index) => {
     card.addEventListener('mouseenter', () =>{
-        if (card.classList.contains('side-left')){
+        if (index % 2 === 0){
             show([sidebarLeft]);
             showInfosLeft(card.id);
-        } else if (card.classList.contains('side-right')){
+        } else {
             show([sidebarRight]);
             showInfosRight(card.id);
         };
     });
     card.addEventListener('mouseleave', () =>{
-        if (card.classList.contains('side-left')){
+          if (index % 2 === 0){
             hide([sidebarLeft]);
-        } else if (card.classList.contains('side-right')){
+        } else {
             hide([sidebarRight]);
         };
     });
@@ -100,11 +103,11 @@ cards.forEach(card => {
 
 cards.forEach(card => {
     card.addEventListener('click', () => {
-        hide([grid, projects])
-        show([sectionDetails])
+        hide([grid, projects]);
+        show([sectionDetails]);
         showDetails(card.id);
         main.style.overflow = 'visible';
-        currentSection.name = 'details'
+        currentSection.name = 'details';
     });
 });
 

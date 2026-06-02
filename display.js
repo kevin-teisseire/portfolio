@@ -28,7 +28,6 @@ export function showDetails(projName){
         decisionContainer.appendChild(wrapper);
     });
     //tag-list
-
     tagContainer.innerHTML = '';
     d.stack.forEach(el => {
         const tag = document.createElement('div');
@@ -37,7 +36,6 @@ export function showDetails(projName){
         tagContainer.appendChild(tag);
         });
     //img-list
-
     imgContainer.innerHTML = '';
     d.images.forEach(el => {
         const img = document.createElement('div');

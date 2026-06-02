@@ -294,7 +294,7 @@ export const detailsContent = {
         solution: `J’ai contribué à la conception et au développement d’un ERP sur mesure, pensé en collaboration directe avec les équipes terrain.
 
         L’outil permet de structurer les processus de production, centraliser les données et améliorer la traçabilité des opérations, tout en restant adaptable aux évolutions des besoins.`,
-        stack: ["BUBBLE", "FIGMA", "MIRO", "HTML", "CSS", "JS"],
+        stack: ["BUBBLE", "FIGMA", "MIRO", "HTML", "CSS", "JS", "API", "XANO", "POSTGRE SQL"],
         linkList: [
             {site : 'Figma', link : "https://www.figma.com/proto/rsPFexa9EDVVy4pafdLMVz/Maquettes-livraison?node-id=6-2&p=f&t=rxPhe5199vz5YD2U-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1", iconClasses: figmaIcnClasses },
         ],
@@ -427,8 +427,101 @@ La plateforme permet aux freelances de consulter et filtrer les offres, et aux e
 
         Il m’a également permis de comparer différentes approches de conception entre une plateforme complexe (bi-face) et une version plus minimaliste.`,
         images: ["images/projets/jobfinder_login.png", "images/projets/pres_jobfinder.png", "images/projets/jobfinder_missions.png", "images/projets/jobfinder_details.png"]
-    }
+    },
+    card_socialforum: {
+        title: "MINI SOCIAL FORUM",
+        subtitle: "FULLSTACK APP",
+        context: `Ce projet est ma première application fullstack complète, développée dans une logique proche d’un produit réel.
 
+        L’objectif était de comprendre et implémenter une architecture web complète incluant :
+
+        - Communication frontend / backend via API REST
+        - Gestion d’une base de données relationnelle
+        - Authentification utilisateur
+        - Interactions sociales type forum (posts, likes, réponses)
+        - Déploiement cloud avec services séparés
+
+        Le projet a évolué progressivement d’une application simple vers une architecture plus réaliste intégrant sécurité, structuration des données et gestion d’état frontend.`,
+        problem: `Le développement de l’application a soulevé plusieurs problématiques techniques concrètes :
+
+        - Communication entre frontend statique et backend distant
+        - Gestion des requêtes asynchrones et synchronisation UI / backend
+        - Organisation d’un frontend sans framework
+        - Gestion d’état global de l’application
+        - Migration SQLite → PostgreSQL
+        - Modélisation de relations complexes entre utilisateurs, posts, likes et messages
+        - Pagination et optimisation des requêtes SQL
+        - Sécurisation des mots de passe utilisateurs
+        - Gestion des uploads d’images en environnement cloud
+        - Gestion des variables d’environnement en production
+        - Déploiement et debugging multi-services (Render / Supabase / Cloudinary)
+        - Compatibilité et erreurs de configuration cloud`,
+        solution: `J’ai mis en place une architecture fullstack modulaire et découplée.
+        Frontend
+        - JavaScript vanilla modulaire (sans framework)
+        - Manipulation avancée du DOM
+        - Gestion d’état global via un objet STATE
+        - Rendu dynamique du forum
+        - Pagination des posts
+        - Gestion des interactions (likes, réponses, modals)
+        - Synchronisation des données backend avec l’interface utilisateur
+
+        Backend
+        - API REST Flask
+        - PostgreSQL (psycopg2)
+        - Requêtes SQL paramétrées
+        - Bcrypt pour le hachage des mots de passe
+        - Architecture backend stateless
+        - Endpoints dédiés forum / auth / interactions
+        - Gestion des erreurs serveur et debugging
+
+        Base de données
+        Structure relationnelle complète :
+        - Users
+        - Forum_posts
+        - User_messages
+        - Post_likes
+
+        Utilisation de :
+        - JOIN / LEFT JOIN
+        - COUNT / GROUP BY
+        - sous-requêtes (EXISTS)
+        - pagination SQL
+        - relations entre entités
+        
+        Infrastructure
+        - Frontend hébergé sur GitHub Pages
+        - Backend déployé sur Render
+        - Base PostgreSQL sur Supabase
+        - Stockage des images sur Cloudinary
+        - Gestion des variables d’environnement
+        - Architecture cloud distribuée
+        `,
+
+        stack: ["JavaScript (Vanilla)", "Flask", "Python", "PostgreSQL", "Supabase", "Cloudinary", "Render", "GitHub Pages", "bcrypt"],
+        linkList: [
+            {site : 'Site', link : "https://kevin-teisseire.github.io/miniApp/", iconClasses: siteIcnClasses},
+            {site : 'GitHub', link : "https://github.com/kevin-teisseire/miniApp", iconClasses: gitIcnClasses},
+        ],
+        decisions: [
+        { title: "Architecture découplée frontend / backend", desc: `Séparation stricte entre frontend statique et backend API afin de faciliter la compréhension des échanges HTTP et de reproduire une architecture proche des applications web modernes.`},
+        { title: "Gestion d’état frontend (STATE)", desc: `Mise en place d’un état global côté frontend pour centraliser les données de l’application et synchroniser dynamiquement l’interface utilisateur avec le backend sans recours à un framework.` },
+        { title: "Modélisation d’une base de données relationnelle", desc: "Conception d’une base de données relationnelle structurée autour des utilisateurs, posts, messages et likes afin de simuler un système de forum et d’exploiter des requêtes SQL avancées." },
+        { title: "Architecture cloud multi-services", desc: "Utilisation de services distincts pour le backend, la base de données et le stockage des images afin de mettre en place une architecture stateless proche d’un environnement de production." },
+        { title: "Sécurisation des données utilisateurs", desc: "Hachage des mots de passe avec bcrypt et utilisation de requêtes SQL paramétrées afin de protéger l’application contre les injections SQL et les failles de sécurité courantes." },
+        ],
+        results: `Ce projet démontre ma capacité à :
+        - Concevoir une application fullstack complète de bout en bout
+        - Structurer une base de données relationnelle complexe
+        - Développer une API REST sécurisée
+        - Construire une interface frontend dynamique sans framework
+        - Gérer un état applicatif complexe en JavaScript vanilla
+        - Déployer une architecture cloud distribuée
+        - Résoudre des problématiques réelles de production
+        - Comprendre les fondamentaux du web moderne (HTTP, SQL, frontend, backend)
+        - Debugger des problèmes d’infrastructure et d’intégration cloud`,
+        images: ["images/projets/socialforum_profile.png", "images/projets/socialforum_forum.png", "images/projets/socialforum_search.png"]
+    }
 };
 
 export const infos = {
@@ -451,14 +544,14 @@ export const infos = {
     card_refactory: {
         subtitle: "ERP INDUSTRIEL",
         role: "👤 Product Builder / Product Owner",
-        stack: "🛠 Bubble • Figma • Miro",
+        stack: "🛠 Bubble • Xano • Figma • Miro",
         strengh: "⚡ Conception d’un ERP métier + modélisation de données",
         type: "⏱ 3 ans"
     },
     card_crypto: {
         subtitle: "APP DATA TEMPS RÉEL",
         role: "👤 Developpeur no code",
-        stack: "🛠 API • JavaScript",
+        stack: "🛠 Bubble • API",
         strengh: "⚡ Intégration et affichage de données crypto en temps réel",
         type: "⏱ Projet personnel"
     },
@@ -531,5 +624,12 @@ export const infos = {
         stack: "🛠 Linux • Terminal",
         strengh: "⚡ Résolution de 33 challenges de sécurité",
         type: "⏱ Projet personnel"
-    }
+    },
+    card_socialforum: {
+        subtitle: "FULLSTACK APP",
+        role: "👤 Fullstack Developer (solo)",
+        stack: "🛠 JavaScript Vanilla / Flask / PostgreSQL",
+        strengh: "⚡ Auth, Forum social, architecture cloud",
+        type: "⏱ Projet personnel"
+    },
 };

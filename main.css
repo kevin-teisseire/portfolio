@@ -327,24 +327,28 @@ body{
     z-index: 2;
 }
 
-#card_refactory{
+.erp{
     background-color: #5c3d08;
     border: 1px solid rgba(180, 140, 40, 0.4);
 }
 
-#card_portfolio, #card_workforgood, #card_jobfinder, #card_alegria, #card_bikemarket, #card_crypto{
-    background-color: #0d2420 ;
+.web-nc{
+    background-color: #093f36 ;
 }
 
-#card_report, #card_todo, #card_otw{
+.web-code{
+    background-color: #1a4227 ;
+}
+
+.cli{
     background-color: #2a1a2a ;
 }
 
-#card_h2o, #card_udemy{
+.design{
     background-color: #0d1f2d ;
 }
 
-#card_nostal{
+.music{
     background-color: #2a0d0d ;
 }
 
@@ -446,9 +450,7 @@ body{
     padding-top: 20px;
     scrollbar-width: none;
     height: 100vh;
-    
 }
-
 
 .details-body-main-wrapper{
     display: flex;
@@ -458,7 +460,6 @@ body{
     column-gap: 70px;
     padding-bottom: 40px;
 }
-
 
 .details-body-left-section-wrapper{
     display: flex;
@@ -565,9 +566,9 @@ body{
 
 .results-section{
     padding-top: 10px;
-    overflow: hidden;
     min-height: 270px;
-    overflow-x: scroll;
+    overflow-x: auto;
+    overflow-y: visible;
     scrollbar-width: none;
     padding-right: 10px;
 }
