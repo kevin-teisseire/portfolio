@@ -39,13 +39,14 @@
     flex-direction: column;
 }
 
+/*
 .icn.visible:hover{
     cursor: pointer;
     opacity: 1;
     height: 115px;
     width: 115px;
 }
-
+*/
 .flex-center{
     display: flex;
     align-items: center;

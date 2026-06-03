@@ -5,7 +5,8 @@
 
 import { 
     icns, black, welcome, navbar, home, drop, bottomTitleEl, 
-    bottomTitleText, coin, flipBtn, linkedinIcn, mailIcn} from './dom.js';
+    bottomTitleText, coin, flipBtn, linkedinIcn, mailIcn,
+    projectIcn} from './dom.js';
 import { show, hide, currentSection } from './navigation.js'
 
 // Welcome text animation
@@ -45,24 +46,49 @@ function createRipples() {
     }, 1600);
 };
 
+let endOfIconAnimation = false
 // Show menu icons animation
 function showIcons() {
     const icons = document.querySelectorAll('.icn');
     icons.forEach((icon, index) => {
         setTimeout(() => {
             icon.classList.add('visible');
-        }, index * 80);
+        }, index * 300);
     });
+    setTimeout(() => {
+        bottomTitleText.textContent = "Projets";
+        bottomTitleEl.classList.add('visible')
+        endOfIconAnimation = true
+        projectIcn.classList.add("hovered")
+    }, 1500); 
 };
+
+// window.addEventListener("mousemove", () => {
+//     if (endOfIconAnimation == true){
+//         projectIcn.style.opacity = 0.5;
+//         endOfIconAnimation == false
+//     }
+// });
+
+
+
 
 // Menu text animation
 icns.forEach(icn => {
     icn.addEventListener('mouseenter', () => {
+        if (endOfIconAnimation === true){
+            icns.forEach(icn => {
+                icn.classList.remove("hovered")
+                });
+            };
         bottomTitleText.textContent = icn.dataset.text;
         bottomTitleEl.classList.add('visible');
+        
+        icn.classList.add("hovered")
     });
     icn.addEventListener('mouseleave', () => {
         bottomTitleEl.classList.remove('visible');
+        icn.classList.remove("hovered")
     });
 });
 

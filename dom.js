@@ -37,3 +37,4 @@ export const coin = document.getElementById('coin');
 export const flipBtn = document.getElementById('flip-btn');
 export const linkedinIcn = document.getElementById('linkedin-icn');
 export const mailIcn = document.getElementById('email-icn');
+export const filtersEl = document.querySelectorAll('.filter-element')

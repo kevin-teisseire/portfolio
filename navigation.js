@@ -3,7 +3,8 @@
 =======================
 */
 import { projects, grid, sectionContact, home, sectionResume, sectionDetails, 
-    resumeIcn, contactIcn, gallery, cards, projectIcn, back, sidebarLeft, sidebarRight, imgContainer, tagContainer } from "./dom.js";
+    resumeIcn, contactIcn, gallery, cards, projectIcn, back, sidebarLeft, sidebarRight, imgContainer, tagContainer, 
+    filtersEl} from "./dom.js";
 
 import { showInfosLeft, showInfosRight, showDetails } from './display.js'
 
@@ -111,5 +112,35 @@ cards.forEach(card => {
     });
 });
 
+// ------ Filter system for project cards ------
+
+
+
+let activeFilters = new Set();
+function toggleFilter(el){
+    const filter = el.dataset.filter;
+    el.classList.toggle("active");
+    if (el.classList.contains("active") && !activeFilters.has(filter)){
+        activeFilters.add(filter);
+    } else if (!el.classList.contains("active") && activeFilters.has(filter)){
+        activeFilters.delete(filter);
+    };
+};
+
+function displayCards(){
+    cards.forEach(card => {
+    const type = card.dataset.type;
+    const visible = activeFilters.size === 0 || activeFilters.has(type);
+    card.classList.toggle("hidden", !visible);
+    });    
+};
+
+filtersEl.forEach(filterIcn => {
+    filterIcn.addEventListener('click', () => {
+        const clickedFilter = document.getElementById(filterIcn.id)
+        toggleFilter(clickedFilter)
+        displayCards()
+    })
+})
 
 
