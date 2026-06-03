@@ -81,40 +81,10 @@ gallery.addEventListener('wheel', (e) => {
     gallery.scrollLeft += e.deltaY;
 });
 
-// PROJECTS SECTION - Display content in sidebar
-let side = "";
-cards.forEach((card, index) => {
-    card.addEventListener('mouseenter', () =>{
-        if (index % 2 === 0){
-            show([sidebarLeft]);
-            showInfosLeft(card.id);
-        } else {
-            show([sidebarRight]);
-            showInfosRight(card.id);
-        };
-    });
-    card.addEventListener('mouseleave', () =>{
-          if (index % 2 === 0){
-            hide([sidebarLeft]);
-        } else {
-            hide([sidebarRight]);
-        };
-    });
-});
-
-cards.forEach(card => {
-    card.addEventListener('click', () => {
-        hide([grid, projects]);
-        show([sectionDetails]);
-        showDetails(card.id);
-        main.style.overflow = 'visible';
-        currentSection.name = 'details';
-    });
-});
-
-// ------ Filter system for project cards ------
+// ------ PROJECTS SECTION - Display content in sidebar ------
 
 
+// Filter system for project cards 
 
 let activeFilters = new Set();
 function toggleFilter(el){
@@ -143,4 +113,50 @@ filtersEl.forEach(filterIcn => {
     })
 })
 
+// Display sidebar left or right
+
+function getVisibleCards(){
+    return [...cards].filter(card => {
+        const type = card.dataset.type
+        return activeFilters.size === 0 ||
+            activeFilters.has(type);
+    });
+};
+
+cards.forEach((card) => {
+      card.addEventListener('mouseenter', () =>{
+        const visibleCards = getVisibleCards()
+        const index = visibleCards.indexOf(card)
+        if (index === -1) return;
+        if (index % 2 === 0){
+            show([sidebarLeft]);
+            showInfosLeft(card.id);
+        } else {
+            show([sidebarRight]);
+            showInfosRight(card.id);
+        };
+    });
+    card.addEventListener('mouseleave', () =>{
+        const visibleCards = getVisibleCards()
+        const index = visibleCards.indexOf(card)
+        if (index === -1) return;
+        if (index % 2 === 0){
+            hide([sidebarLeft]);
+        } else {
+            hide([sidebarRight]);
+        };
+    });
+});
+
+// Go to project details
+
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        hide([grid, projects]);
+        show([sectionDetails]);
+        showDetails(card.id);
+        main.style.overflow = 'visible';
+        currentSection.name = 'details';
+    });
+});
 
