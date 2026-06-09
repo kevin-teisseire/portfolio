@@ -236,7 +236,7 @@ export const detailsContent = {
         solution: `J’ai conçu un projet artistique global incluant un album, des clips vidéo et un site web interactif. 
         
         Le site présente les contenus à travers une interface immersive, notamment via un cube interactif en CSS/JavaScript permettant de naviguer entre les clips.`,
-        stack: ["Bubble", "ILLUSTRATOR", "ADOBE XD", "PREMIERE PRO", "AFTER EFFECTS", "PHOTOSHOP", "PRO TOOLS", "FL STUDIO", "HTML", "CSS", "JS"],
+        stack: ["ILLUSTRATOR", "ADOBE XD", "PREMIERE PRO", "AFTER EFFECTS", "PHOTOSHOP", "PRO TOOLS", "FL STUDIO", "BUBBLE", "HTML", "CSS", "JS"],
         linkList: [
             {site : 'Site', link : "https://nostal-el-briscardo.bubbleapps.io/version-test", iconClasses: siteIcnClasses}
         ],

@@ -106,11 +106,12 @@ body{
     margin-right: 20px;
     font-size: 22px;
     cursor: pointer;
-    transition: opacity 0.3s ease-in;
+    transition: all 0.3s ease-in-out;
 }
 
 #back-icn:hover{
     color: rgba(255, 255, 255, 1);
+    font-size: 24px;
 
 }
 
@@ -466,6 +467,7 @@ body{
 .fa-brands.link-icn, .fa-solid.link-icn{
     color:white;
     font-size: 20px;
+    transition: color 0.3s ease-in-out;
 }
 
 .project-link{
@@ -477,7 +479,19 @@ body{
     column-gap: 10px;
     align-items: center;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
+
+.project-link:hover{
+    border: 1px solid black;
+    background-color: white;
+}
+
+
+.project-link:hover .link-text, .project-link:hover .fa-brands.link-icn, .project-link:hover .fa-solid.link-icn{
+    color: black;
+}
+
 
 .project-title-left-wrapper{
     display: flex;
@@ -486,8 +500,10 @@ body{
 }
 
 .link-text{
-    color: white
+    color: white;
+    transition: color 0.3s ease-in-out;
 }
+
 
 .details-link-wrapper{
     display: flex;
