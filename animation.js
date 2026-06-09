@@ -21,6 +21,7 @@ function launchAnimation() {
     setTimeout(() => { hide(welcome)}, 800);
     setTimeout(() => { 
         drop.style.opacity = '0';
+        drop.style.pointerEvents = 'none';
         createRipples();
         showIcons();
     },900)

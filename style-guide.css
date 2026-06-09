@@ -129,6 +129,7 @@ p{
     justify-content: center;
     justify-self: center;
     width: 40%;
+    z-index: 10;
 }
 
 .huge-white-title{

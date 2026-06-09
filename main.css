@@ -731,12 +731,14 @@ body{
     column-gap: 20px;
     align-items: center;
     justify-content: center;
+    z-index: 20;
 }
 
 .contact-icn{
     color: white;
     font-size: 30px;
     transition: all 0.2s ease;
+    z-index: 10;
 }
 
 .contact-icn:hover, .contact-icn.mail:hover{
