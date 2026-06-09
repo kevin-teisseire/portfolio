@@ -178,7 +178,7 @@ export const detailsContent = {
         problem: `Les informations sur les crypto-monnaies sont souvent dispersées sur plusieurs plateformes et difficiles à suivre en temps réel. Il manquait une interface simple permettant de visualiser rapidement les cours, les tendances et les actifs favoris.`,
         solution: `J’ai développé une marketplace connectée à une API externe permettant d’afficher les cours des crypto-monnaies en temps réel. Les utilisateurs peuvent consulter les actifs, suivre leurs évolutions et accéder à leurs crypto-monnaies favorites depuis une interface centralisée.`,
         
-        stack: ["Bubble"],
+        stack: ["BUBBLE"],
         linkList: [
             {site : 'Site', link : "https://crypto-followlio.bubbleapps.io/version-test", iconClasses: siteIcnClasses}
         ],
@@ -206,7 +206,7 @@ export const detailsContent = {
         solution: `J’ai reconstruit l’interface en utilisant Figma en m’appuyant sur une analyse détaillée du layout. 
         
         J’ai utilisé les composants, auto-layouts et grilles pour reproduire fidèlement la structure tout en garantissant une cohérence globale.`,
-        stack: ["Figma", "CSS Peaper"],
+        stack: ["FIGMA", "CSS PEAPER"],
         linkList: [
             {site : 'Figma', link : "https://www.figma.com/proto/NfChfG7OReYxuMg2ZsvHW6/UI-Udemy?node-id=1-3&starting-point-node-id=1%3A3&t=UPiQJdliN6j1DYDj-1", iconClasses: figmaIcnClasses}
         ],
@@ -262,7 +262,7 @@ export const detailsContent = {
         context: `Projet de conception d’interface pour un outil d’ingénierie dédié à la gestion et au suivi des écoulements d’eaux usées. Bien que le projet n’ait pas été développé, la phase de design a permis de poser les bases d’une interface métier.`,
         problem: `Les outils d’ingénierie manipulent des données complexes et peu lisibles. Le défi était de concevoir une interface claire permettant de visualiser et comprendre facilement des flux et informations techniques.`,
         solution: `J’ai conçu une maquette sur Figma visant à simplifier la lecture des données grâce à une organisation claire des informations, une hiérarchisation visuelle et une interface adaptée aux besoins métiers.`,
-        stack: ["Figma"],
+        stack: ["FIGMA"],
         linkList: [
             {site : 'Figma', link : "https://www.figma.com/proto/FK1doaeUNV04pH6EocKr73/H2O?node-id=13-8&p=f&t=yHkJtxV91IDGK4K6-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=13%3A8", iconClasses: figmaIcnClasses}
         ],
@@ -498,7 +498,7 @@ La plateforme permet aux freelances de consulter et filtrer les offres, et aux e
         - Architecture cloud distribuée
         `,
 
-        stack: ["JavaScript (Vanilla)", "Flask", "Python", "PostgreSQL", "Supabase", "Cloudinary", "Render", "GitHub Pages", "bcrypt"],
+        stack: ["JAVASCRIPT (Vanilla)", "FLASK", "PYTHON", "POSTGRE SQL", "SUPABASE", "CLOUDINARY", "RENDER", "BCRYPT"],
         linkList: [
             {site : 'Site', link : "https://kevin-teisseire.github.io/miniApp/", iconClasses: siteIcnClasses},
             {site : 'GitHub', link : "https://github.com/kevin-teisseire/miniApp", iconClasses: gitIcnClasses},
