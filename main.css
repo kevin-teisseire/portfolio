@@ -91,14 +91,18 @@ body{
     width: 115px;
 }
 
-
-.nom {
-    color: white;
-    opacity: 60%;
-    font-family: Arial, Helvetica, sans-serif;
+.nom-wrapper{
+    display: flex;
     margin-left: 20px;
+    column-gap: 10px;
+}
+
+.nom-el {
+    display: flex;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
-    letter-spacing: 2px;
+    column-gap: 3px;
 }
 
 #back-icn{
@@ -785,3 +789,4 @@ body{
     border: 1px solid white;
 }
     */
+

@@ -6,7 +6,9 @@
 import { 
     icns, black, welcome, navbar, home, drop, bottomTitleEl, 
     bottomTitleText, coin, flipBtn, linkedinIcn, mailIcn,
-    projectIcn} from './dom.js';
+    projectIcn,
+    nom,
+    nomWrapper} from './dom.js';
 import { show, hide, currentSection } from './navigation.js'
 
 // Welcome text animation
@@ -27,7 +29,9 @@ function launchAnimation() {
     },900)
     setTimeout(() => { black.classList.add('disapear')},100);
     setTimeout(() => { black.remove() }, 6000);
-    setTimeout(() => {show(navbar)}, 1000);
+    setTimeout(() => {
+        show(navbar)
+    }, 1000);
     setTimeout(() => {
         show(home);
         currentSection.name = 'home';
@@ -62,6 +66,10 @@ function showIcons() {
         endOfIconAnimation = true
         projectIcn.classList.add("hovered")
     }, 1500); 
+    setTimeout(() => {
+        makeItShine()
+    }, 1700);
+ 
 };
 
 // window.addEventListener("mousemove", () => {
@@ -92,4 +100,22 @@ icns.forEach(icn => {
         icn.classList.remove("hovered")
     });
 });
+
+function makeItShine(){
+    const letters = document.querySelectorAll('.letter')
+    let time = 0
+    letters.forEach(el => {
+        setTimeout(() => {
+            el.classList.add('shine')
+            el.addEventListener('animationend', () => {
+                el.classList.remove('shine')
+            }, {once: true})
+        }, time);
+        time += 100
+    })
+}
+
+nomWrapper.addEventListener("mouseenter", () => {
+    makeItShine()
+})
 

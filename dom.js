@@ -38,3 +38,7 @@ export const flipBtn = document.getElementById('flip-btn');
 export const linkedinIcn = document.getElementById('linkedin-icn');
 export const mailIcn = document.getElementById('email-icn');
 export const filtersEl = document.querySelectorAll('.filter-element')
+export const nom = document.querySelector('.nom');
+export const nomWrapper = document.querySelector('.nom-wrapper');
+
+
