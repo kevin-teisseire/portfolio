@@ -628,8 +628,8 @@ export const infos = {
     card_socialforum: {
         subtitle: "FULLSTACK APP",
         role: "👤 Fullstack Developer (solo)",
-        stack: "🛠 JavaScript Vanilla / Flask / PostgreSQL",
-        strengh: "⚡ Auth, Forum social, architecture cloud",
+        stack: "🛠 JavaScript Vanilla • Flask • PostgreSQL",
+        strengh: "⚡ Auth + Forum social + architecture cloud",
         type: "⏱ Projet personnel"
     },
 };
