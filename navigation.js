@@ -16,15 +16,40 @@ export const currentSection = {
     name: ''
 } 
 
+export function showAndBlur(sections){
+    if(Array.isArray(sections)){
+        setTimeout(() => {
+            sections.forEach(el =>{
+            el.classList.add('visible');
+            });
+        }, 400);
+    } else {
+        setTimeout(() => {
+            sections.classList.add('visible');
+        }, 400);
+    };
+};
+
+export function hideAndBlur(sections){
+    if(Array.isArray(sections)){
+        sections.forEach(el =>{
+            el.classList.remove('visible');
+        });
+    } else {
+        sections.classList.remove('visible');
+    };
+};
+
 export function show(sections){
     if(Array.isArray(sections)){
         sections.forEach(el =>{
-            el.classList.add('visible');
+        el.classList.add('visible');
         });
     } else {
         sections.classList.add('visible');
     };
 };
+
 
 export function hide(sections){
     if(Array.isArray(sections)){
@@ -37,41 +62,41 @@ export function hide(sections){
 };
 
 projectIcn.addEventListener('click', () => {
-    hide(home);
-    show([grid, projects]);
+    hideAndBlur(home);
+    showAndBlur([grid, projects]);
     currentSection.name = 'projects';
 });
 
 back.addEventListener('click', () => {
     if(currentSection.name == 'details'){
-        hide(sectionDetails);
-        show([projects, grid]);
+        hideAndBlur(sectionDetails);
+        showAndBlur([projects, grid]);
         imgContainer.source = ``;
         tagContainer.source=``;
         currentSection.name = 'projects';
     } else if (currentSection.name == 'projects'){
-        hide([projects, grid]);
-        show(home);
+        hideAndBlur([projects, grid]);
+        showAndBlur(home);
         currentSection.name = 'home';
     } else if (currentSection.name == 'resume'){
-        hide(sectionResume);
-        show(home);
+        hideAndBlur(sectionResume);
+        showAndBlur(home);
         currentSection.name = 'home';
     } else if (currentSection.name == 'contact'){
-        hide(sectionContact);
-        show(home);
+        hideAndBlur(sectionContact);
+        showAndBlur(home);
     };
 });
 
 resumeIcn.addEventListener('click', () =>{
-    hide(home);
-    show(sectionResume);
+    hideAndBlur(home);
+    showAndBlur(sectionResume);
     currentSection.name = 'resume';
 });
 
 contactIcn.addEventListener('click', () =>{
-    hide(home);
-    show(sectionContact);
+    hideAndBlur(home);
+    showAndBlur(sectionContact);
     currentSection.name = 'contact';
 });
 
@@ -152,8 +177,8 @@ cards.forEach((card) => {
 
 cards.forEach(card => {
     card.addEventListener('click', () => {
-        hide([grid, projects]);
-        show([sectionDetails]);
+        hideAndBlur([grid, projects]);
+        showAndBlur([sectionDetails]);
         showDetails(card.id);
         main.style.overflow = 'visible';
         currentSection.name = 'details';

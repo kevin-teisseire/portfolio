@@ -80,3 +80,9 @@ opacity: 0;
 .letter.shine{
     animation: shining 0.5s ease-in;
 }
+
+@keyframes bluring-in {
+    0% { filter: blur(10px); } 
+    50% { filter: blur(10px); }
+    100% { filter: blur(0px); } 
+}

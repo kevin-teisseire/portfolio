@@ -9,7 +9,7 @@ import {
     projectIcn,
     nom,
     nomWrapper} from './dom.js';
-import { show, hide, currentSection } from './navigation.js'
+import { show, hide, currentSection, showAndBlur } from './navigation.js'
 
 // Welcome text animation
 setTimeout(() => {show(welcome)}, 300);
@@ -25,8 +25,11 @@ function launchAnimation() {
         drop.style.opacity = '0';
         drop.style.pointerEvents = 'none';
         createRipples();
-        showIcons();
     },900)
+
+    setTimeout(() => {
+        showIcons()
+    }, 1100);
     setTimeout(() => { black.classList.add('disapear')},100);
     setTimeout(() => { black.remove() }, 6000);
     setTimeout(() => {
